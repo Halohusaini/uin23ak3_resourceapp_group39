@@ -1,15 +1,21 @@
-import { useState } from 'react'
-import { BrowserRouter, Router } from 'react-router-dom'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainNavigation from '../src/components/MainNavigation';
+import Resources from '../src/resources';
 
 function App() {
     return (
-    <>
-      <Router>
-        
-      </Router>
-    </>
-  )
-}
+        <Router>
+            <div>
+                <MainNavigation />
+                <Routes>
+                    
+                    <Route path="/resources/:category" element={<Resources />} />
 
-export default App
+                    
+                    <Route path="/" element={<div>Welcome! Select a category.</div>} />
+                </Routes>
+            </div>
+        </Router>
+    );
+}
