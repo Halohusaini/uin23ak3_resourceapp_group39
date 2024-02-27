@@ -1,21 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainNavigation from '../src/components/MainNavigation';
-import Resources from '../src/resources';
+import MainNavigation from './components/MainNavigation'; // Adjust the path as needed
+import Resources from './components/Resources'; // Adjust the path as needed
 
 function App() {
     return (
-        <Router>
+        
             <div>
                 <MainNavigation />
                 <Routes>
-                    
                     <Route path="/resources/:category" element={<Resources />} />
-
-                    
                     <Route path="/" element={<div>Welcome! Select a category.</div>} />
                 </Routes>
             </div>
-        </Router>
+        
     );
 }
+
+export default App;

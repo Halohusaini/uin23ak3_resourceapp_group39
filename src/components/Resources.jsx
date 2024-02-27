@@ -1,32 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import resources from '../resources/resources';
+import resources from '../resources/resources'; // Adjust the path as needed
+import NavigationLink from './NavigationLink';
 
-function Resources() {
-    const { category } = useParams(); // Assuming dynamic routing based on category
-    const [currentResources, setCurrentResources] = useState([]);
-
-    useEffect(() => {
-        // Assuming resources is an object where keys are categories and values are arrays of resources
-        // Update currentResources based on the category selected
-        const selectedResources = resources[category] || [];
-        setCurrentResources(selectedResources);
-    }, [category]);
+export default function Resources() {
+    const { category } = useParams();
+    let content = resources.find(res => res.category === category);
 
     return (
-        <div>
-            <h2>{category} Resources</h2>
-            <ul>
-                {currentResources.map((resource, index) => (
-                    <li key={index}>
-                        {/* Assuming resource has a name and description */}
-                        <h3>{resource.name}</h3>
-                        <p>{resource.description}</p>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <section>
+            <article>
+                <h1>{content?.category}</h1>
+                <p>{content?.text}</p>
+                <ul>
+                    {content?.sources.map((source, index) => (
+                        <NavigationLink key={index} source={source} />
+                    ))}
+                </ul>
+            </article>
+        </section>
     );
 }
-
-export default Resources;

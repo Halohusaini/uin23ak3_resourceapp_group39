@@ -1,35 +1,21 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom"
-import resources from '../resources/resources';
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Use Link for navigation
 
 export default function MainNavigation() {
-    const [activeSource, setActiveSource] = useState("HTML");
-    const categories = ["HTML", "CSS", "JavaScript", "React", "Sanity and headless CMS"];
-
-    useEffect(() => {
-        console.log(activeSource);
-    }, [activeSource]);
-
-    const handleSourceChange = (source) => {
-        setActiveSource(source);
-    };
+    const categories = ["HTML", "CSS", "JavaScript", "React", "Sanity"];
+    const [activeCategory, setActiveCategory] = useState(categories[0]);
 
     return (
-        <div id="tab-container">
+        <nav>
             {categories.map((category) => (
                 <button
                     key={category}
-                    onClick={() => handleSourceChange(category)}
-                    className={activeSource === category ? 'active' : ''}
+                    className={`btn ${activeCategory === category ? 'active' : ''}`}
+                    onClick={() => setActiveCategory(category)}
                 >
-                    {category}
+                    <Link to={`/resources/${category}`}>{category}</Link>
                 </button>
             ))}
-        </div>
+        </nav>
     );
-
-    // Funksjon for å håndtere kildeendring og oppdatere den aktive tilstanden
-
-
 }

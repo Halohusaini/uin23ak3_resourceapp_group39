@@ -1,13 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import MainNavigation from './MainNavigation'; // Adjust the path as needed
 
-
-export default function Layout () {
+export default function Layout() {
     return (
-         <>
-         <main>
-            
-         </main>
-         </> 
-    )
+        <main>
+            <MainNavigation />
+        </main>
+    );
 }
