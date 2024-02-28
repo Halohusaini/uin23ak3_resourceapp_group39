@@ -15,6 +15,8 @@ export default function MainNavigation() {
                 >
                     <Link to={`/resources/${category}`}>{category}</Link>
                 </button>
+
+                
             ))}
         </nav>
     );

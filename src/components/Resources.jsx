@@ -5,11 +5,20 @@ import NavigationLink from './NavigationLink';
 
 export default function Resources() {
     const { category } = useParams();
-    let content = resources.find(res => res.category === category);
+    let content = resources.filter(res => res.category === category);
+    
+    if (content.length==0){
+        return <p>Category not found</p>
+    }
+
+
+    
+    
 
     return (
         <section>
-            <article>
+           
+
                 <h1>{content?.category}</h1>
                 <p>{content?.text}</p>
                 <ul>
@@ -17,7 +26,7 @@ export default function Resources() {
                         <NavigationLink key={index} source={source} />
                     ))}
                 </ul>
-            </article>
+            
         </section>
     );
 }
