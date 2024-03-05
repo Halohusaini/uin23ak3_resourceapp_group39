@@ -61,61 +61,28 @@ main {
   color: var(--primary-color);
 }
 
-#tab-container button.active {
-  background-color: var(--hover-color); 
-  color: var(--primary-color); 
+.tablinker {
+  border-style: solid;
+  border-color: var(--black);
+  color: var(--grey);
+  padding: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: none;
+  border-color: var(--grey);
 }
 
-#tab-container #SanityBtn {
-  min-width: 17rem;
+.tablinker {
+  border-style: solid;
+  border-color: var(--black);
+  color: var(--grey);
+  padding: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: none;
+  border-color: var(--grey);
 }
 
-#content {
-  text-align: left;
-  padding: var(--spacing-l);
-  max-height: 400px;
-  color: var(--text-color);
-  max-width: 100%;
-  font-size: var(--font-size-l);
-}
 
-#content h2,
-#content p,
-#content ul {
-  display: inline-block;
-  text-align: left;
-  width: 80%;
-}
-
-#content ul {
-  padding-right: var(--spacing-l);
-  max-width: 600px;
-  margin: 0;
-}
-
-#content li {
-  padding: 0;
-}
-
-#content li a {
-  display: inline-block;
-  padding: var(--spacing-s);
-  margin: 0 var(--spacing-s);
-}
-
-#content li a:hover {
-  color: var(--text-color);
-}
-
-@media (max-width: 768px) {
-  #tab-container button {
-    flex-basis: calc(50% - var(--spacing-m));
-  }
-}
-
-@media (max-width: 480px) {
-  #tab-container button {
-    flex-basis: 100%;
-    padding: var(--spacing-m) var(--spacing-s);
-  }
-}

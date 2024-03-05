@@ -7,18 +7,21 @@ export default function MainNavigation() {
 
     return (
         <nav>
-            <ul>
-                
-            {categories.map((category) => (
-            
-                   <li key={category}
-                    className={`btn ${activeCategory === category ? 'active' : ''}`}
-                    
-                >
-                    <Link to={`/resources/${category}`}>{category}</Link>
-                </li>
-            ))}
-            </ul>
+            <Link to="/category/HTML" className="tablinker" id="html">
+          HTML
+        </Link>
+        <Link to="/category/CSS" className="tablinker" id="css">
+          CSS
+        </Link>
+        <Link to="/category/JavaScript" className="tablinker" id="javascript">
+          JavaScript
+        </Link>
+        <Link to="/category/React" className="tablinker" id="react">
+          React
+        </Link>
+        <Link to="/category/Sanity and headless CMS" className="tablinker" id="sanity-and-headless-cms">
+          Sanity and headless CMS
+        </Link>
         </nav>
 
     );
