@@ -2,22 +2,24 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Use Link for navigation
 
 export default function MainNavigation() {
-    const categories = ["HTML", "CSS", "JavaScript", "React", "Sanity"];
+    const categories = ["HTML", "CSS", "JavaScript", "React", "headless-cms"];
     const [activeCategory, setActiveCategory] = useState(categories[0]);
 
     return (
         <nav>
+            <ul>
+                
             {categories.map((category) => (
-                <button
-                    key={category}
+            
+                   <li key={category}
                     className={`btn ${activeCategory === category ? 'active' : ''}`}
-                    onClick={() => setActiveCategory(category)}
+                    
                 >
                     <Link to={`/resources/${category}`}>{category}</Link>
-                </button>
-
-                
+                </li>
             ))}
+            </ul>
         </nav>
+
     );
 }
