@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Use Link for navigation
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook for navigation
 
 export default function MainNavigation() {
     const categories = ["HTML", "CSS", "JavaScript", "React", "headless-cms"];
     const [activeCategory, setActiveCategory] = useState(categories[0]);
+    const navigate = useNavigate(); // Use the useNavigate hook for navigation
+
+    const handleCategoryClick = (category) => {
+        setActiveCategory(category);
+        navigate(`/resources/${category}`); // Navigate programmatically
+    };
 
     return (
         <nav id="tab-container">
@@ -11,14 +17,11 @@ export default function MainNavigation() {
                 <button
                     key={category}  
                     className={`btn ${activeCategory === category ? 'active' : ''}`}
-                    onClick={() => setActiveCategory(category)}
+                    onClick={() => handleCategoryClick(category)} // Use the new handler function
                 >
-                    <Link to={`/resources/${category}`}>{category}</Link>
+                    {category}
                 </button>
-
-                
             ))}
         </nav>
-
     );
 }

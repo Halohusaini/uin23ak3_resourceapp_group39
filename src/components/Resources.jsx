@@ -9,14 +9,14 @@ export default function Resources() {
 
   return (
     <section id='content'>
-      <article>
+      
         <h1>{category}</h1>
         <ul>
           {content.map((source, index) => (
             <NavigationLink key={index} source={source} />
           ))}
         </ul>
-      </article>
+      
     </section>
   );
 }
