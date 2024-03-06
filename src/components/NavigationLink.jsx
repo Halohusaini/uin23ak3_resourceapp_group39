@@ -10,20 +10,3 @@ export default function NavigationLink({ source }) {
     );
 }
 
-
-/* // Inside NavigationLink.jsx
-
-import React from 'react';
-
-const NavigationLink = ({ source }) => {
-  return (
-    <li>
-      <a href={source.url} target="_blank" rel="noopener noreferrer">
-        {source.title}
-      </a>
-    </li>
-  );
-};
-
-export default NavigationLink;
-*/

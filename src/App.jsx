@@ -11,7 +11,7 @@ function App() {
                 <MainNavigation />
                 <Routes>
                     <Route path="/resources/:category" element={<Resources />} />
-                    <Route path="/" element={<div>Welcome! Select a category.</div>} />
+                    
                 </Routes>
             </div>
         
