@@ -7,6 +7,7 @@ export default function Resources() {
   const { category } = useParams();
   let content = resources.filter(res => res.category === category.toLowerCase());
 
+  
   return (
     <section id='content'>
       
@@ -20,3 +21,4 @@ export default function Resources() {
     </section>
   );
 }
+
