@@ -106,4 +106,39 @@ body {
   #content li a:hover {
     color: var(--text-color);
   }
+
+  // Tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+  #root, #content {
+    width: 90%;
+    margin: 4rem auto;
+  }
+
+  #tab-container button {
+    padding: var(--spacing-s) var(--spacing-m);
+    font-size: var(--font-size-l);
+  }
+}
+
+// Mobile Phones
+@media (max-width: 767px) {
+  #root, #content {
+    width: 95%;
+    margin: 2rem auto;
+  }
+
+
+  #tab-container {
+    flex-direction: column;
+    gap: var(--spacing-s);
+  }
+
+  #tab-container button {
+    padding: var(--spacing-s);
+    font-size: var(--font-size-s);
+    height: 60px;
+  }
+}
+
+
   
