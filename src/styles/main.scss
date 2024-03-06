@@ -1,96 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 
-// Variables
-$primary-color: #2a324b;
-$secondary-color: #e1e5ee;
-$text-color: #2a324b;
-$background-color: #fff;
-$hover-color: #fff;
+:root {
+  --primary-color: #2a324b;
+  --secondary-color: #e1e5ee;
+  --text-color: #2a324b;
+  --background-color: #fff;
+  --hover-color: #fff;
 
-$font-primary: 'Roboto', sans-serif;
+  --font-primary: 'Roboto', sans-serif;
 
-$spacing-s: 0px;
-$spacing-m: 25px;
-$spacing-l: 60px;
+  --spacing-s: 0px;
+  --spacing-m: 25px;
+  --spacing-l: 60px;
 
-$font-size-s: 18px;
-$font-size-l: 16px;
+  --font-size-s: 18px;
+  --font-size-l: 16px;
 
-$border-radius: 4px;
-
-// Global styles
-* {
-  font-family: $font-primary;
+  --border-radius: 4px;
 }
 
+
+
+
+* {
+  font-family: var(--font-primary);
+}
 body {
   margin: 0;
   padding: 0;
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
 }
 
-main {
-  background-color: $background-color;
+#root {
+  background-color: var(--background-color);
   width: 80%;
-  margin: 8rem auto;
+  margin: 8rem auto; 
   padding: 0;
   
 }
 
-// Navigation tabs
 #tab-container {
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
-  gap: $spacing-m;
+  gap: var(--spacing-m);
   padding: 0;
-
-  button {
-    width: 100%;
-    padding: $spacing-m $spacing-l;
-    background-color: $primary-color;
-    color: $background-color;
-    border: none;
-    min-width: 100px;
-    height: 80px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: $font-size-s;
-
-    &:not(.active):hover {
-      background-color: $hover-color;
-      color: $primary-color;
-    }
-  }
 }
 
-// Content styles
-#content {
-  text-align: left;
-  padding: $spacing-l;
-  max-height: 400px;
-  color: $text-color;
-  max-width: 100%;
-  font-size: $font-size-l;
+#tab-container button {
+  width: 100%;
+  padding: var(--spacing-m) var(--spacing-l);
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  min-width: 100px;
+  height: 80px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: var(--font-size-s);
+}
 
- 
-  ul {
-    padding-right: $spacing-l;
+#tab-container button:not(.active):hover {
+  background-color: var(--hover-color);
+  color: var(--primary-color);
+}
+
+#tab-container button.active {
+    background-color: var(--hover-color); 
+    color: var(--primary-color); 
+  }
+
+#content {
+    text-align: left;
+    padding: var(--spacing-l);
+    max-height: 400px;
+    color: var(--text-color);
+    max-width: 100%;
+    font-size: var(--font-size-l);
+  }
+  
+  #content h2,
+  #content p,
+  #content ul {
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+  }
+  
+  #content ul {
+    padding-right: var(--spacing-l);
     max-width: 600px;
     margin: 0;
   }
-
-  li {
+  
+  #content li {
     padding: 0;
-
-    a {
-      display: inline-block;
-      padding: $spacing-s;
-      margin: 0 $spacing-s;
-
-      &:hover {
-        color: $text-color;
-      }
-    }
   }
-}
+  
+  #content li a {
+    display: inline-block;
+    padding: var(--spacing-s);
+    margin: 0 var(--spacing-s);
+  }
+  
+  #content li a:hover {
+    color: var(--text-color);
+  }
+  
