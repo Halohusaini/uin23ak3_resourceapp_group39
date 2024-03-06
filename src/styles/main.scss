@@ -58,6 +58,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: var(--font-size-s);
+  border-radius: 0%;
 }
 
 #tab-container button:not(.active):hover {
