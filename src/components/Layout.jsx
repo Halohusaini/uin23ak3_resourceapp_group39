@@ -1,5 +1,5 @@
 import React from 'react';
-import MainNavigation from './MainNavigation'; // Adjust the path as needed
+import MainNavigation from './MainNavigation'; 
 import Resources from './Resources';
 
 

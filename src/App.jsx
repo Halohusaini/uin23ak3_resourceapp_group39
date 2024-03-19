@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import MainNavigation from './components/MainNavigation'; // Adjust the path as needed
-import Resources from './components/Resources'; // Adjust the path as needed
+import MainNavigation from './components/MainNavigation'; 
+import Resources from './components/Resources'; 
 import './styles/main.scss'
 
 function App() {

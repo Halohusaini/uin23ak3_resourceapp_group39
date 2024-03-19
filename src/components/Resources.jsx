@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import resources from '../resources/resources'; // Adjust the path as needed
+import resources from '../resources/resources'; 
 import NavigationLink from './NavigationLink';
 
 

@@ -1,4 +1,4 @@
-// Corrected NavigationLink.jsx to display a single resource link
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
