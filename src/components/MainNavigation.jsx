@@ -21,7 +21,7 @@ export default function MainNavigation() {
 
     setCategories(uniqueCategories);
     setActiveCategory(uniqueCategories[0]);
-  });
+  }, []);
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
