@@ -11,7 +11,7 @@ function App() {
                 <MainNavigation />
                 <Routes>
                     <Route path="/resources/:category" element={<Resources />} />
-                    <Route path="/" element={<Navigate replace to="/resources/HTML" />} />
+                    <Route path="/" element={<Navigate replace to="/resources/html" />} />
                 </Routes>
             </div>
         
